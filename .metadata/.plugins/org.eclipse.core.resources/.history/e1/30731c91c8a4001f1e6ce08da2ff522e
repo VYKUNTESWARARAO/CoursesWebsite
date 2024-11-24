@@ -1,0 +1,39 @@
+package com.vyku.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.vyku.entity.Courses;
+import com.vyku.repository.ICoursesMgmtRepository;
+
+@Service
+public class CoursesMgmtServiceImpl implements ICoursesMgmtService {
+	@Autowired
+	private ICoursesMgmtRepository repo;
+
+	@Override
+	public List<Courses> showCourses() {
+		List<Courses> list = new ArrayList<>();
+		list.add(new Courses(12L, "React Js", "This is beginner courses who wants to learn React"));
+		list.add(new Courses(13L, "Java", "This is beginner courses who wants to learn Java"));
+		list.add(new Courses(14L, "Spring Boot", "This is beginner courses who wants to learn Spring Boot"));
+		return list;
+	}
+
+	@Override
+	public Optional<Courses> fetchCourseById(Long id) {
+		Optional<Courses> opt = repo.findById(id);
+		
+		if (opt.isPresent()) {
+
+			return opt;
+		}
+
+		return course;
+	}
+
+}

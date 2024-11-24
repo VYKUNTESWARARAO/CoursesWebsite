@@ -1,0 +1,5 @@
+1731674031962	Rename package 'com.example.demo'
+1731675553676	Delete element
+1731758773052	Encapsulate field 'id, ...'
+1731758785829	Encapsulate field 'title, ...'
+1731758801779	Encapsulate field 'description, ...'

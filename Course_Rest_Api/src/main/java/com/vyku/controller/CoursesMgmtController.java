@@ -1,0 +1,66 @@
+package com.vyku.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vyku.entity.Courses;
+import com.vyku.service.ICoursesMgmtService;
+
+@RestController
+@RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:5173")
+public class CoursesMgmtController {
+
+	@Autowired
+	private ICoursesMgmtService service;
+
+	@GetMapping("/home")
+	public ResponseEntity<String> showHome() {
+
+		return new ResponseEntity<String>("this is home page", HttpStatus.OK);
+	}
+
+	@GetMapping("/all-courses")
+	public ResponseEntity<List<Courses>> getCourses() {
+		List<Courses> list = service.showCourses();
+		return new ResponseEntity<List<Courses>>(list, HttpStatus.OK);
+	}
+
+	@GetMapping("/course/{id}")
+	public ResponseEntity<Courses> getCourseById(@PathVariable String id) {
+		Courses course = service.fetchCourseById(Long.parseLong(id));
+
+		return new ResponseEntity<Courses>(course, HttpStatus.OK);
+	}
+
+	@PostMapping("/add-course")
+	public ResponseEntity<String> addCourse(@RequestBody Courses course) {
+		String msg = service.insertCourse(course);
+		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
+	}
+
+	@PutMapping("/update")
+	public ResponseEntity<String> updateCourseByid(@RequestBody Courses course) {
+		String msg = service.updateCourse(course);
+		return new ResponseEntity<String>(msg, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<String> deleteCourseById(@PathVariable String id) {
+		String msg = service.removeCourseById(Long.parseLong(id));
+
+		return new ResponseEntity<String>(msg, HttpStatus.OK);
+	}
+}

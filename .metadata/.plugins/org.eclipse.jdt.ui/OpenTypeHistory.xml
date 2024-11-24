@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Course_Rest_Api/C:\/Users\/chinn\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.3.5\/spring-data-jpa-3.3.5.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.3.5=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1731078177933"/>
+    <typeInfo handle="=Course_Rest_Api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.vyku.service{ICoursesMgmtService.java[ICoursesMgmtService" modifiers="513" timestamp="1731843966555"/>
+    <typeInfo handle="=Course_Rest_Api/C:\/Users\/chinn\/.m2\/repository\/com\/zaxxer\/HikariCP\/5.1.0\/HikariCP-5.1.0.jar=/maven.pomderived=/true=/=/maven.groupId=/com.zaxxer=/=/maven.artifactId=/HikariCP=/=/maven.version=/5.1.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;com.zaxxer.hikari.util(ConcurrentBag$IConcurrentBagEntry.class[IConcurrentBagEntry" modifiers="1545" timestamp="1731078177619"/>
+</typeInfoHistroy>

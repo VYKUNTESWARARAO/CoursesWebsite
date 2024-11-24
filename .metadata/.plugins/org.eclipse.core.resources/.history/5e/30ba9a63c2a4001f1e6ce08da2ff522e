@@ -1,0 +1,5 @@
+package com.vyku.service;
+
+public interface ICoursesMgmtService {
+
+}

@@ -1,0 +1,19 @@
+package com.vyku.entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
+public class Courses {
+
+	private Long id;
+	private String title;
+	private String description;
+
+	public static void main(String[] args) {
+		Courses test = new Courses();
+		test.setTitle("Lombok Working!");
+		System.out.println(test.getName());
+	}
+}

@@ -1,0 +1,14 @@
+package com.vyku.entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
+public class Courses {
+
+	private Long id;
+	private String title;
+	private String description;
+
+}
